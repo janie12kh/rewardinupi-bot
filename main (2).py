@@ -33,6 +33,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"🛡 Please join {CHANNEL_USERNAME} first.")
 
 async def handle_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("🎉 You've received ₹5 bonus for joining!)
     query = update.callback_query
     await query.answer()
     user_id = query.from_user.id
