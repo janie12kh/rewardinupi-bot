@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+  <h2>User List</h2>
+  <a href="/withdrawals">View Withdrawals</a> | <a href="/logout">Logout</a>
+  <table border="1">
+    <tr><th>ID</th><th>Balance</th><th>Referred By</th></tr>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.user_id }}</td>
+      <td>₹{{ user.balance }}</td>
+      <td>{{ user.referred_by }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

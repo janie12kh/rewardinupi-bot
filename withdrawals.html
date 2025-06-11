@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Withdrawals</title></head>
+<body>
+  <h2>Pending Withdrawals</h2>
+  <a href="/dashboard">Back to Dashboard</a>
+  <table border="1">
+    <tr><th>User ID</th><th>Amount</th><th>UPI</th><th>Status</th><th>Action</th></tr>
+    {% for row in requests %}
+    <tr>
+      <td>{{ row.user_id }}</td>
+      <td>₹{{ row.amount }}</td>
+      <td>{{ row.upi }}</td>
+      <td>{{ row.status }}</td>
+      <td>
+        <a href="/approve/{{ row.user_id }}">✅ Approve</a> |
+        <a href="/reject/{{ row.user_id }}">❌ Reject</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

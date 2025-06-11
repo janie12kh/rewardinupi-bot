@@ -1,0 +1,10 @@
+BOT_TOKEN = "YOUR_BOT_TOKEN"
+API_ID = 123456
+API_HASH = "your_api_hash"
+CHANNEL_USERNAME = "@jonnielotter"
+ADMIN_IDS = [123456789]
+DAILY_BONUS_AMOUNT = 2
+REFERRAL_BONUS = 5
+
+RAZORPAYX_AUTH = ("rzp_test_key", "rzp_test_secret")
+RAZORPAYX_ACCOUNT = "acc_test123456"
